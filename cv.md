@@ -21,6 +21,27 @@ Previously worked as PHP developer. Was a BE developer on Drupal for several yea
 - Ability to read another's code and fix bugs
 - Adherence to best coding standarts
 
+### **Code example**
+**Sum of Digits / Digital Root** kata from Codewars:  
+Given *n*, take the sum of the digits of *n*. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+```php
+function digital_root($number): int
+{
+  switch ($number) {
+    case is_int($number) && $number > 0:
+      $sum = $number;
+      // Split the number to array of digits.
+      // Find sum until it becomes less than 10.
+      while ($sum >= 10) {
+        $sum = array_sum(str_split($sum));
+      }
+      return $sum;
+    
+    default:
+      return 0;     
+	}
+}
+```
 ### **Experinence**
 *2013 - 2015* - [DrupalJedi](https://drupaljedi.com/), Junior/Mid Drupal Developer  
 *2015 - 2020* - NDA, several freelance projects  
